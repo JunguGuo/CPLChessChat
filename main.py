@@ -3,7 +3,6 @@ import streamlit as st
 import re
 import pandas as pd
 from elevenlabs import generate, play, set_api_key
-import ffmpeg
 import streamlit.components.v1 as components
 from PIL import Image
 
