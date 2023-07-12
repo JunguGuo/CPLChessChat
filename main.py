@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 import re
 import pandas as pd
-from elevenlabs import generate, play, set_api_key
+#from elevenlabs import generate, play, set_api_key
 import streamlit.components.v1 as components
 from PIL import Image
 
@@ -11,8 +11,9 @@ from PIL import Image
 st.title("John G. White Chess Collection")
 image = Image.open('chess.jpg')
 st.image(image)
-#
-set_api_key("d862c7b12db7211fc86caa76d3c8d09f")
+
+#elevenlabs api
+#set_api_key("d862c7b12db7211fc86caa76d3c8d09f")
 
 
 #
