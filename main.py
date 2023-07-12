@@ -17,7 +17,7 @@ st.image(image)
 
 
 #
-openai.api_key = "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"
+openai.api_key = "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"
 df = pd.read_csv('collection.csv')
 
 if "openai_model" not in st.session_state:
