@@ -8,6 +8,14 @@ from PIL import Image
 
 #st.markdown("<h1 style='text-align: center; color: black;'>John G. White Chess Collection</h1>", unsafe_allow_html=True)
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 st.title("John G. White Chess Collection")
 image = Image.open('chess.jpg')
 st.image(image)
