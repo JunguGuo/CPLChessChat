@@ -17,10 +17,9 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-st.title("Chess Chat")
-st.subheader("John G. White Chess Collection at Cleveland Public Library")
-image = Image.open('chess.jpg')
-st.image(image)
+password = st.text_input('Enter password', type= 'password')
+
+
 
 #elevenlabs api
 #set_api_key("d862c7b12db7211fc86caa76d3c8d09f")
@@ -191,6 +190,11 @@ def process_prompt(prompt):
 
 
 def main():
+    st.title("Chess Chat")
+    st.subheader("John G. White Chess Collection at Cleveland Public Library")
+    image = Image.open('chess.jpg')
+    st.image(image)
+
     for message in st.session_state.messages:
         if message["role"] != "system":
             with st.chat_message(message["role"]):
@@ -206,7 +210,7 @@ def main():
         if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
             process_prompt(prompt)
 
-password = st.text_input('Enter password', type= 'password')
+
 if password == 'cambly123':
     main()
         
