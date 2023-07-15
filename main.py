@@ -146,11 +146,12 @@ def process_prompt(prompt):
         id_numbers = extract_id_numbers(full_response)
 
         if id_numbers:
-            records = list(map( lambda id: df[df['ID'] == id], id_numbers))
-            tabs = st.tabs(list(map(lambda record: 
-                                    truncate('ID ' + str(record['ID'].values[0]) + ": " + record['Title'].values[0], 25), 
-                                    records)))
             try:
+                records = list(map( lambda id: df[df['ID'] == id], id_numbers))
+                tabs = st.tabs(list(map(lambda record: 
+                                        truncate('ID ' + str(record['ID'].values[0]) + ": " + record['Title'].values[0], 25), 
+                                        records)))
+                
                 for i in range(len(records)):
                     with tabs[i]:
                         st.subheader(f"{records[i]['Title'].values[0]}")
