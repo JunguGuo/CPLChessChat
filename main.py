@@ -206,7 +206,9 @@ def main():
         if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
             process_prompt(prompt)
 
-main()
+password = st.text_input('Enter password', type= 'password')
+if password == 'cambly123':
+    main()
         
         
     
