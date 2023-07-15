@@ -101,13 +101,6 @@ But wait, there's more! This collection is no one-trick pony. It's got literary 
 
 So, brace yourselves for a feline-filled journey through time and wit. Get ready to unravel the secrets of the John G. White chess collection, where rare books, medieval manuscripts, and a whole lot of literary mischief await. It's time to sharpen those claws of curiosity and embark on this furry-tastic quest. Let's pounce into the world of chess, one meowment at a time! Meow-velous!!"""})
 
-
-
-for message in st.session_state.messages:
-    if message["role"] != "system":
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-
 def extract_id_numbers(chat_response):
     id_numbers = []
     pattern = r"ID (\d+)"
@@ -197,13 +190,23 @@ def process_prompt(prompt):
 
 
 
-if st.session_state["option_prompt"]:
-    process_prompt(st.session_state["option_prompt"])
-    st.session_state["option_prompt"] = ""
-    st.chat_input("What do you like to know about the John G. White chess collection?")
-else:
-    if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
-        process_prompt(prompt)
+def main():
+    for message in st.session_state.messages:
+        if message["role"] != "system":
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
+
+
+
+    if st.session_state["option_prompt"]:
+        process_prompt(st.session_state["option_prompt"])
+        st.session_state["option_prompt"] = ""
+        st.chat_input("What do you like to know about the John G. White chess collection?")
+    else:
+        if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
+            process_prompt(prompt)
+
+main()
         
         
     
