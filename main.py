@@ -17,7 +17,8 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-st.title("John G. White Chess Collection")
+st.title("Chess Chat")
+st.subheader("John G. White Chess Collection at Cleveland Public Library")
 image = Image.open('chess.jpg')
 st.image(image)
 
