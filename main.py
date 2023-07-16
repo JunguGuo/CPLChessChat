@@ -17,7 +17,7 @@ hide_streamlit_style = """
             .css-1a1tcp.e1ewe7hr3 {display: none;}
             </style>
             """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+#st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 sidebar()
 
