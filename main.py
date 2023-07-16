@@ -191,10 +191,7 @@ def process_prompt(prompt):
 
 
 def main():
-    st.set_page_config(page_title="Chess Chat", page_icon="♟️", layout="wide")
-    st.header("📖 Chess Chat")
-
-    #st.title("Chess Chat")
+    st.title("Chess Chat")
     st.subheader("John G. White Chess Collection at Cleveland Public Library")
     image = Image.open('chess.jpg')
     st.image(image)
