@@ -16,7 +16,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
+st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
 
 password = st.text_input('Enter password', type= 'password')
 
@@ -191,7 +191,7 @@ def process_prompt(prompt):
 
 
 def main():
-    st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
+    
     st.header("📖KnowledgeGPT")
     st.title("Chess Chat")
     st.subheader("John G. White Chess Collection at Cleveland Public Library")
