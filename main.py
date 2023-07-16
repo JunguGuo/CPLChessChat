@@ -191,6 +191,8 @@ def process_prompt(prompt):
 
 
 def main():
+    st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
+    st.header("📖KnowledgeGPT")
     st.title("Chess Chat")
     st.subheader("John G. White Chess Collection at Cleveland Public Library")
     image = Image.open('chess.jpg')
