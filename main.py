@@ -7,6 +7,7 @@ import streamlit.components.v1 as components
 from PIL import Image
 
 #st.markdown("<h1 style='text-align: center; color: black;'>John G. White Chess Collection</h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
 
 hide_streamlit_style = """
             <style>
@@ -16,7 +17,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-st.set_page_config(page_title="KnowledgeGPT", page_icon="📖", layout="wide")
+
 
 password = st.text_input('Enter password', type= 'password')
 
