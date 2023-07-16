@@ -5,6 +5,7 @@ import pandas as pd
 #from elevenlabs import generate, play, set_api_key
 import streamlit.components.v1 as components
 from PIL import Image
+from components.sidebar import sidebar
 
 #st.markdown("<h1 style='text-align: center; color: black;'>John G. White Chess Collection</h1>", unsafe_allow_html=True)
 st.set_page_config(page_title="Chess Chat", page_icon="♟️", layout="centered")
@@ -18,6 +19,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+sidebar()
 
 password = st.text_input('Enter password', type= 'password')
 
