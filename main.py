@@ -223,9 +223,9 @@ def main():
         if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
             process_prompt(prompt)
 
-
-if password == 'cambly123':
-    main()
+main()
+# if password == 'cambly123':
+#     main()
         
         
     
