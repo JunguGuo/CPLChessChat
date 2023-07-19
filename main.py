@@ -205,8 +205,10 @@ def main():
     st.image(image)
 
     #
-    
-    st.map(maps_df)
+    #st.map(maps_df)
+    location = {"latitude": 43, "longitude": 22}
+    st.map(location)
+
 
     for message in st.session_state.messages:
         if message["role"] != "system":
