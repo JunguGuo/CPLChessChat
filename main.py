@@ -33,7 +33,7 @@ password = st.text_input('Enter password', type= 'password')
 #
 openai.api_key = st.secrets["OPENAI_API"]
 df = pd.read_csv('collection.csv')
-
+maps_df = df.dropna(subset=['longitude', 'latitude'])
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo-16k"
@@ -155,7 +155,7 @@ def process_prompt(prompt):
                     with tabs[i]:
                         st.subheader(f"{records[i]['Title'].values[0]}")  
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
-                        st.map({'longitude':'58.2011', 'latitude':'58.2011'})
+                        st.map(maps_df)
             except Exception:
                 pass
 
@@ -205,7 +205,7 @@ def main():
     st.image(image)
 
     #
-    maps_df = df.dropna(subset=['longitude', 'latitude'])
+    
     st.map(maps_df)
 
     for message in st.session_state.messages:
