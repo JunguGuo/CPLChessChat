@@ -206,7 +206,7 @@ def main():
 
     #
     #st.map(maps_df)
-    location = {"latitude": 43, "longitude": 22}
+    location = {"latitude": '43', "longitude": '22'}
     st.map(location)
 
 
