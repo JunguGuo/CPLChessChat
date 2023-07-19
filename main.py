@@ -155,7 +155,7 @@ def process_prompt(prompt):
                     with tabs[i]:
                         st.subheader(f"{records[i]['Title'].values[0]}")  
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
-                        st.map(maps_df)
+                        st.map(df[df['ID'] == records[i]['ID'].values[0]],11)
             except Exception:
                 pass
 
@@ -205,9 +205,7 @@ def main():
     st.image(image)
 
     #
-    #st.map(maps_df)
-    location = {"latitude": '43', "longitude": '22'}
-    st.map(location)
+    st.map(maps_df,11)
 
 
     for message in st.session_state.messages:
