@@ -205,7 +205,7 @@ def main():
     st.image(image)
 
     #
-    st.map(maps_df,11)
+    st.map(maps_df)
 
 
     for message in st.session_state.messages:
