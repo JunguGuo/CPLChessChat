@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit.components.v1 as components
 from PIL import Image
 from components.sidebar import sidebar
+import numpy as np
 
 #st.markdown("<h1 style='text-align: center; color: black;'>John G. White Chess Collection</h1>", unsafe_allow_html=True)
 st.set_page_config(page_title="Chess Chat", page_icon="♟️", layout="centered")
@@ -32,6 +33,7 @@ password = st.text_input('Enter password', type= 'password')
 #
 openai.api_key = st.secrets["OPENAI_API"]
 df = pd.read_csv('collection.csv')
+
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo-16k"
@@ -200,6 +202,10 @@ def main():
     st.subheader("John G. White Chess Collection at Cleveland Public Library")
     image = Image.open('chess.jpg')
     st.image(image)
+
+    #
+    maps_df = df.dropna(subset=['longitude', 'latitude'])
+    st.map(maps_df)
 
     for message in st.session_state.messages:
         if message["role"] != "system":
