@@ -154,9 +154,9 @@ def process_prompt(prompt):
                 for i in range(len(records)):
                     with tabs[i]:
                         st.subheader(f"{records[i]['Title'].values[0]}")
-                        st.map({'longtitude':records[i]['longtitude'].values[0], 'latitude':records[i]['latitude'].values[0] })
+                        
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
-
+                        st.map({'longtitude':records[i]['longtitude'].values[0], 'latitude':records[i]['latitude'].values[0] })
             except Exception:
                 pass
 
