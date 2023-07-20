@@ -9,7 +9,7 @@ from components.sidebar import sidebar
 import numpy as np
 
 #st.markdown("<h1 style='text-align: center; color: black;'>John G. White Chess Collection</h1>", unsafe_allow_html=True)
-st.set_page_config(page_title="Chess Chat", page_icon="♟️", layout="centered")
+st.set_page_config(page_title="Chess Chat", page_icon="♟️", layout="centered", initial_sidebar_state="collapsed")
 
 hide_streamlit_style = """
             <style>
