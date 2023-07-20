@@ -155,7 +155,7 @@ def process_prompt(prompt):
                     with tabs[i]:
                         st.subheader(f"{records[i]['Title'].values[0]}")  
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
-                        st.map(df[df['ID'] == records[i]['ID'].values[0]],6)
+                        st.map(df[df['ID'] == records[i]['ID'].values[0]],4)
             except Exception:
                 pass
 
@@ -173,12 +173,21 @@ def process_prompt(prompt):
         # except Exception:
         #     print("audio api error")
 
+        # Chess game
         if "opening" in full_response:
             components.html("""<iframe id="10790895" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="//www.chess.com/emboard?id=10790895"></iframe><script>window.addEventListener("message",e=>{e['data']&&"10790895"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+30}px`)});</script>""",
                             height=400,
                             )
+        
+        # Chess set
+        if "Lewis" in full_response:
+            components.html("""<div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>""")
+        
         st.session_state.messages.append({"role": "assistant", "content": full_response})
         
+           
+
+
         options = [""":question: Can you show me any rare manuscripts or early printed books that contain ancient chess treatises or historical references?""",
                    """:question: What is the oldest chess book in the collection? """,
                    """:question: Are there any literary works or novels that prominently feature chess as a central theme or metaphor? """
