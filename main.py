@@ -134,7 +134,7 @@ def process_prompt(prompt):
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ]
-        msgs[-1]["content"] += " " + "(Respond in the tone of a witty and eccentric cat in the language of the text outside of parenthesis)"
+        #msgs[-1]["content"] += " " + "(Respond in the tone of a witty and eccentric cat)"
         for response in openai.ChatCompletion.create(
             model=st.session_state["openai_model"],
             messages = msgs,
