@@ -167,6 +167,8 @@ def process_prompt(prompt):
                                             """,
                                             height=480,
                                             )
+                        if ID == "4":
+                            st.video("https://www.youtube.com/watch?v=xmZC8bUU1MI")
                         st.map(df[df['ID'] == records[i]['ID'].values[0]],4)
                         # if ID == "21":
                         #     st.write("hahaha")
