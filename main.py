@@ -147,7 +147,7 @@ def process_prompt(prompt):
         id_numbers = extract_id_numbers(full_response)
 
         if id_numbers:
-            try:
+            #try:
                 records = list(map( lambda id: df[df['ID'] == id], id_numbers))
                 tabs = st.tabs(list(map(lambda record: 
                                         truncate('ID ' + str(record['ID'].values[0]) + ": " + record['Title'].values[0], 25), 
@@ -176,8 +176,8 @@ def process_prompt(prompt):
                         # else:
                         #     pass
                             #components.html("""<div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>""",height=480,)
-            except Exception:
-                pass
+            #except Exception:
+            #    pass
 
 
         # for id in id_numbers:
