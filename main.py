@@ -130,12 +130,14 @@ def process_prompt(prompt):
     with st.chat_message("assistant", avatar= "😼" ):
         message_placeholder = st.empty()
         full_response = ""
-        for response in openai.ChatCompletion.create(
-            model=st.session_state["openai_model"],
-            messages=[
+        msgs=[
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
-            ],
+            ]
+        msgs[-1]["content"] += " " + "(Respond in the tone of a dramatic and bombastic chess aficionado cat)"
+        for response in openai.ChatCompletion.create(
+            model=st.session_state["openai_model"],
+            messages = msgs,
             stream=True,
         ):
             full_response += response.choices[0].delta.get("content", "")
@@ -238,7 +240,7 @@ def main():
         st.chat_input("What do you like to know about the John G. White chess collection?")
     else:
         if prompt:= st.chat_input("What do you like to know about the John G. White chess collection?"):
-            process_prompt(prompt + " (Respond in the tone of a dramatic and bombastic chess aficionado cat)")
+            process_prompt(prompt)
 
 main()
 # if password == 'cambly123':
