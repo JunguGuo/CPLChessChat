@@ -159,7 +159,7 @@ def process_prompt(prompt):
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
                                 # Chess set
                         
-                        ID = records[i]['ID'].values[0]
+                        ID = str(records[i]['ID'].values[0])
                         st.write(str(type(ID)))
                         if ID == "21":
                             st.write("hahaha")
