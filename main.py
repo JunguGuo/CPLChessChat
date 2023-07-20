@@ -158,6 +158,7 @@ def process_prompt(prompt):
                         st.subheader(f"{records[i]['Title'].values[0]}")  
                         st.image (f"./images/{records[i]['ID'].values[0]}.jpg", caption = f"{records[i]['ID'].values[0]} : {records[i]['Title'].values[0]} -- {records[i]['Author'].values[0]}" )
                                 # Chess set
+                        st.write(records[i]['ID'].values[0])
                         if records[i]['ID'].values[0] == "21":
                             st.write("hahaha")
                             components.html("""
