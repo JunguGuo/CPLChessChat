@@ -62,7 +62,7 @@ Lastly, the users might speak a variety of different languages. You should respo
 "8","Philidor's manuscript",,"Francois Andre Danican Philidor"
 "9","Il Gioco degli Scacchi (The Game of Chess)",,"Gioachino Greco"
 "15","Gisela Kahn Gresser's Death Mask",,"Gresser, Gisela Kahn"
-"21","Lewis Chessmen (replica)","In 2001, the chess pieces reached new audiences through the first Harry Potter film, Harry Potter and the Philosopher’s Stone (Sorcerer’s Stone in the American release). In wizard’s chess, the pieces are enchanted and move by themselves. Near the climax of the film, Ron, Harry and Hermione faced giant versions of the pieces that had been enchanted to protect the Philosopher’s Stone.","-"
+"21","Lewis Chess Set (replica)","In 2001, the chess pieces reached new audiences through the first Harry Potter film, Harry Potter and the Philosopher’s Stone (Sorcerer’s Stone in the American release). In wizard’s chess, the pieces are enchanted and move by themselves. Near the climax of the film, Ron, Harry and Hermione faced giant versions of the pieces that had been enchanted to protect the Philosopher’s Stone.","-"
 "22","the Knight's tour"," It is safe to say that when the material in the John G. White collection bearing upon the Knight's Tour problem is all catalogued, the number of entries in the card catalogue will number at least one hundred.",
 "24","The Alfonso Manuscript (the Book of Games)",,"completed by order of Alfonso X"
 "25","Rubáiyát of Omar Khayyám",,"Fitzgerald, Edward"
@@ -181,8 +181,10 @@ def process_prompt(prompt):
         
         # Chess set
         if "Lewis" in full_response:
-            components.html("""<div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" style="width:100%;border:none;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>""",
-                            height=400,
+            components.html("""
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+                            """,
+                            height=480,
                             )
         
         st.session_state.messages.append({"role": "assistant", "content": full_response})
@@ -217,11 +219,11 @@ def main():
 
     #
     st.map(maps_df)
-    components.html("""
-                    <div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-                    """,
-                    height=480
-                    )
+    # components.html("""
+    #                 <div class="sketchfab-embed-wrapper"> <iframe title="Lewis Chess Set" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/eddbebab12424c8aa610a21b9b7e19e5/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lewis-chess-set-eddbebab12424c8aa610a21b9b7e19e5?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Lewis Chess Set </a> by <a href="https://sketchfab.com/britishmuseum?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> The British Museum </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=eddbebab12424c8aa610a21b9b7e19e5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+    #                 """,
+    #                 height=480
+    #                 )
 
     for message in st.session_state.messages:
         if message["role"] != "system":
