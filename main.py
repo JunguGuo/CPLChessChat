@@ -161,7 +161,7 @@ def process_prompt(prompt):
                         
                         ID = records[i]['ID'].values[0]
                         st.write(ID)
-                        if ID == "21":
+                        if "21" == "21":
                             st.write("hahaha")
                         else:
                             st.write("nono")
