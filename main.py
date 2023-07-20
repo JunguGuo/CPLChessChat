@@ -160,8 +160,8 @@ def process_prompt(prompt):
                                 # Chess set
                         
                         ID = records[i]['ID'].values[0]
-                        st.write(ID)
-                        if "21" == "21":
+                        st.write(str(type(ID)))
+                        if ID == "21":
                             st.write("hahaha")
                         else:
                             st.write("nono")
