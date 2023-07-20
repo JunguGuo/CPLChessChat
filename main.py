@@ -30,6 +30,7 @@ password = st.text_input('Enter password', type= 'password')
 #set_api_key("d862c7b12db7211fc86caa76d3c8d09f")
 
 
+
 #
 openai.api_key = st.secrets["OPENAI_API"]
 df = pd.read_csv('collection.csv')
@@ -105,6 +106,22 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
 But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling!
 
 So, brace yourselves for a feline-filled journey through time and wit. Get ready to unravel the secrets of the John G. White chess collection, where rare books, medieval manuscripts, and a whole lot of literary mischief await. It's time to sharpen those claws of curiosity and embark on this furry-tastic quest. Let's pounce into the world of chess, one meowment at a time! Meow-velous!!"""})
+
+
+#
+js = f"""
+<script>
+    function scroll(dummy_var_to_force_repeat_execution){{
+        var textAreas = parent.document.querySelectorAll('section.main');
+        for (let index = 0; index < textAreas.length; index++) {{
+            textAreas[index].style.color = 'red'
+            textAreas[index].scrollTop = textAreas[index].scrollHeight;
+        }}
+    }}
+    scroll({len(st.session_state.messages)})
+</script>
+"""
+st.components.v1.html(js)
 
 def extract_id_numbers(chat_response):
     id_numbers = []
