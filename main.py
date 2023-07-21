@@ -106,6 +106,18 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
 But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling!
 
 So, brace yourselves for a feline-filled journey through time and wit. Get ready to unravel the secrets of the John G. White chess collection, where rare books, medieval manuscripts, and a whole lot of literary mischief await. It's time to sharpen those claws of curiosity and embark on this furry-tastic quest. Let's pounce into the world of chess, one meowment at a time! Meow-velous!!"""})
+    options = [""":question: What do you have in the collection? """,
+                """:question: Surprise me with some of the treasures from the collection """,
+                """:question: Tell me about the John G. White chess collection """
+                ]
+
+    # This doesn't work...        
+    # for i in range(len(options)):
+    #     st.button(options[i], on_click = lambda: st.session_state.update({"option_prompt": options[i]}))
+    st.divider()
+    st.button(options[0], on_click = lambda: st.session_state.update({"option_prompt": options[0]}))
+    st.button(options[1], on_click = lambda: st.session_state.update({"option_prompt": options[1]}))
+    st.button(options[2], on_click = lambda: st.session_state.update({"option_prompt": options[2]}))
 
 
 # auto scroll to bottom
