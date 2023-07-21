@@ -262,7 +262,7 @@ def main():
 
     if(len(st.session_state.messages)==2):
         options = [""":question: Tell me more about the John G. White chess collection. """,
-                """:question: Can you share some of the fascinating treasures found in the collection? """,
+                """:question: Can you share some of the fascinating treasures found in the collection """,
                 """:question: What are some of the prominent themes and stories featured in the collection? """
                 ]
         # This doesn't work...        
