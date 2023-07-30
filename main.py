@@ -110,19 +110,19 @@ So, brace yourselves for a feline-filled journey through time and wit. Get ready
 
 
 # auto scroll to bottom
-js = f"""
-<script>
-    function scroll(dummy_var_to_force_repeat_execution){{
-        var textAreas = parent.document.querySelectorAll('section.main');
-        for (let index = 0; index < textAreas.length; index++) {{
-            textAreas[index].style.color = 'red'
-            textAreas[index].scrollTop = textAreas[index].scrollHeight;
-        }}
-    }}
-    scroll({len(st.session_state.messages)})
-</script>
-"""
-st.components.v1.html(js)
+# js = f"""
+# <script>
+#     function scroll(dummy_var_to_force_repeat_execution){{
+#         var textAreas = parent.document.querySelectorAll('section.main');
+#         for (let index = 0; index < textAreas.length; index++) {{
+#             textAreas[index].style.color = 'red'
+#             textAreas[index].scrollTop = textAreas[index].scrollHeight;
+#         }}
+#     }}
+#     scroll({len(st.session_state.messages)})
+# </script>
+# """
+# st.components.v1.html(js)
 
 def extract_id_numbers(chat_response):
     id_numbers = []
