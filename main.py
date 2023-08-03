@@ -230,7 +230,7 @@ def main():
     
     st.header("♟️😼Chat with the Chess Cat")
     #st.title("Chess Chat")
-    st.subheader("John G. White Chess Collection at Cleveland Public Library")
+    #st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
     # st.image(image)
 
