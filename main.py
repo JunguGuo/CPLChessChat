@@ -223,8 +223,9 @@ def process_prompt(prompt):
            
 
 
-        options = [""":question: Can you show me any rare manuscripts or early printed chess books?""",
+        options = [""":question: What's the oldest chess book in the collection?""",
                    """:question: Are there any items related to the Netflix show "Queen's Gambit" in the collection? """,
+                   """:question: What's the most enigmatic chess set in the collection? """,
                    """:question: Are there any literary works that feature chess as a central theme or metaphor? """
                    ]
 
@@ -235,6 +236,7 @@ def process_prompt(prompt):
         st.button(options[0], on_click = lambda: st.session_state.update({"option_prompt": options[0]}))
         st.button(options[1], on_click = lambda: st.session_state.update({"option_prompt": options[1]}))
         st.button(options[2], on_click = lambda: st.session_state.update({"option_prompt": options[2]}))
+        st.button(options[3], on_click = lambda: st.session_state.update({"option_prompt": options[3]}))
             
     return
 
