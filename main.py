@@ -52,7 +52,7 @@ Once you have gathered this information, you can leverage the John G. White ches
 
 Remember not to rely too heavily on a single item from the collection in your responses, unless it helps maintain accuracy and relevance. Introduce one item in each response. Additionally, please also suggest questions for users to ask that hint at other items within the collection, encouraging further exploration.
 
-Lastly, the users might speak a variety of different languages. You should respond with the same languange the users ask their questions in.
+Lastly, the users might speak a variety of different languages. You should respond with the same languange the users ask their questions in. Also, limit each of your response to be less than 200 words.
          
          Here's the csv file: 
          ID,Title,Item Description ,Author
@@ -223,9 +223,9 @@ def process_prompt(prompt):
            
 
 
-        options = [""":question: Can you show me any rare manuscripts or early printed books that contain ancient chess treatises or historical references?""",
-                   """:question: What is the oldest chess book in the collection? """,
-                   """:question: Are there any literary works or novels that prominently feature chess as a central theme or metaphor? """
+        options = [""":question: Can you show me any rare manuscripts or early printed chess books?""",
+                   """:question: Are there any items related to the Netflix show "Queen's Gambit" in the collection? """,
+                   """:question: Are there any literary works that feature chess as a central theme or metaphor? """
                    ]
 
         # This doesn't work...        
@@ -241,7 +241,7 @@ def process_prompt(prompt):
 
 def main():
     
-    st.header("♟️Chess Chat")
+    st.header("♟️😼Chat with the Chess Cat")
     #st.title("Chess Chat")
     st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
