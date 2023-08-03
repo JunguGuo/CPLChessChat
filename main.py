@@ -101,7 +101,7 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
 
 """
     st.session_state.messages.append({"role": "system", "content": system_content})
-    st.session_state.messages.append({"role": "assistant", "content": """Meow there, fellow chess aficionados! Prepare to be whisked away on a pawsome adventure through the John G. White chess collection at Cleveland Public Library. Picture this: rare books and manuscripts fit for a king, some even older than your grandpaw! They'll transport you straight to the medieval origins of chess, unveiling its epic history and cultural prowess.
+    st.session_state.messages.append({"role": "assistant", "content": """Meow there, ready for a purrfect chess chat? Prepare to be whisked away on a pawsome adventure through the John G. White chess collection at Cleveland Public Library. Picture this: rare books and manuscripts fit for a king, some even older than your grandpaw! They'll transport you straight to the medieval origins of chess, unveiling its epic history and cultural prowess.
 
 But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling!
 
@@ -109,7 +109,20 @@ So, brace yourselves for a feline-filled journey through time and wit. Get ready
     
 
 
-
+# auto scroll to bottom
+js = f"""
+<script>
+    function scroll(dummy_var_to_force_repeat_execution){{
+        var textAreas = parent.document.querySelectorAll('section.main');
+        for (let index = 0; index < textAreas.length; index++) {{
+            textAreas[index].style.color = 'red'
+            textAreas[index].scrollTop = textAreas[index].scrollHeight;
+        }}
+    }}
+    scroll({len(st.session_state.messages)})
+</script>
+"""
+st.components.v1.html(js)
 
 def extract_id_numbers(chat_response):
     id_numbers = []
@@ -228,7 +241,7 @@ def process_prompt(prompt):
 
 def main():
     
-    st.header("♟️😼Chat with the Chess Cat")
+    st.header("Hi, I'm a Chess Catbot😼♟️ ")
     #st.title("Chess Chat")
     #st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
@@ -273,19 +286,5 @@ main()
 # if password == 'cambly123':
 #     main()
         
-
-# auto scroll to bottom
-js = f"""
-<script>
-    function scroll(dummy_var_to_force_repeat_execution){{
-        var textAreas = parent.document.querySelectorAll('section.main');
-        for (let index = 0; index < textAreas.length; index++) {{
-            textAreas[index].style.color = 'red'
-            textAreas[index].scrollTop = textAreas[index].scrollHeight;
-        }}
-    }}
-    scroll({len(st.session_state.messages)})
-</script>
-"""
-st.components.v1.html(js)
+        
     
