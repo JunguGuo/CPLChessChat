@@ -243,7 +243,7 @@ def process_prompt(prompt):
 
 def main():
     
-    st.header("Hey, I'm a Chess Catbot😼♟️ ")
+    st.header("Hi, I'm a Chess Catbot😼♟️ ")
     #st.title("Chess Chat")
     #st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
