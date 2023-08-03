@@ -224,8 +224,8 @@ def process_prompt(prompt):
 
 
         options = [""":question: What's the oldest chess book in the collection?""",
+                   """:question: What are some intriguing chess sets in the collection? """,
                    """:question: Are there any items related to the Netflix show "Queen's Gambit" in the collection? """,
-                   """:question: What's the most enigmatic chess set in the collection? """,
                    """:question: Are there any literary works that feature chess as a central theme or metaphor? """
                    ]
 
