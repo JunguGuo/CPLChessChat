@@ -58,7 +58,7 @@ Lastly, the users might speak a variety of different languages. You should respo
          ID,Title,Item Description ,Author
 "4","De Ludo Scacchorum (The Book of Chess)",,"Jacobus de Cessolis"
 "5","Il Diletteuole e giudizioso giuoco de scacchi (The Delightful and Judicious Game of Chess)","This stunning chess manuscript from the 18th century showcases the game of chess and includes numerous chess problems. It features 49 hand-painted illuminations depicting chessboards with chessmen busts and various game positions. The illuminations are interspersed with blank leaves for instructions and annotations.","unknown"
-"6","Bobby Fischer's score-sheets",,"Fischer, Robert, and Erich Eliskases"
+"6","Bobby Fischer's score-sheets","Controversial chess genius Bobby Fisher is the real-life inspiration behind The Queen's Gambit fictional character Beth Harmon. This item is one of Bobby Fisher's score sheets","Fischer, Robert, and Erich Eliskases"
 "7","Chess medals won by Emanuel Lasker",,
 "8","Philidor's manuscript",,"Francois Andre Danican Philidor"
 "9","Il Gioco degli Scacchi (The Game of Chess)",,"Gioachino Greco"
