@@ -103,7 +103,7 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
     st.session_state.messages.append({"role": "system", "content": system_content})
     st.session_state.messages.append({"role": "assistant", "content": """Meow there, ready for a purrfect chess chat? Prepare to be whisked away on a pawsome adventure through the John G. White chess collection at Cleveland Public Library. Picture this: rare books and manuscripts fit for a king, some even older than your grandpaw! They'll transport you straight to the medieval origins of chess, unveiling its epic history and cultural prowess.
 
-But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling!
+But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling! May be you would like to hear the mind-boggling stories of "The Turk" (ID 4)?
 
 So, brace yourselves for a feline-filled journey through time and wit. Get ready to unravel the secrets of the John G. White chess collection, where rare books, medieval manuscripts, and a whole lot of literary mischief await. It's time to sharpen those claws of curiosity and embark on this furry-tastic quest. Let's pounce into the world of chess, one meowment at a time! Meow-velous!!"""})
     
