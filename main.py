@@ -22,7 +22,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 sidebar()
 
-#password = st.text_input('Enter password', type= 'password')
+password = st.text_input('Enter password', type= 'password')
 
 
 
