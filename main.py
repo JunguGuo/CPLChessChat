@@ -42,6 +42,16 @@ if "openai_model" not in st.session_state:
 if "option_prompt" not in st.session_state:
     st.session_state["option_prompt"] = ""
 
+if "option0_asked" not in st.session_state:
+    st.session_state["option0_asked"] = False
+if "option1_asked" not in st.session_state:
+    st.session_state["option1_asked"] = False
+if "option2_asked" not in st.session_state:
+    st.session_state["option2_asked"] = False
+if "option3_asked" not in st.session_state:
+    st.session_state["option3_asked"] = False
+if "option4_asked" not in st.session_state:
+    st.session_state["option4_asked"] = False
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -230,15 +240,41 @@ def process_prompt(prompt):
                    """:question: Do you have any items connected to the Netflix sensation, 'Queen's Gambit'?""",
                    """:question: Can you guide me through the strategic intricacies of a famous chess opening?"""
                    ]
-
+        
         # This doesn't work...        
         # for i in range(len(options)):
         #     st.button(options[i], on_click = lambda: st.session_state.update({"option_prompt": options[i]}))
         st.divider()
-        st.button(options[0], on_click = lambda: st.session_state.update({"option_prompt": options[0]}))
-        st.button(options[1], on_click = lambda: st.session_state.update({"option_prompt": options[1]}))
-        st.button(options[2], on_click = lambda: st.session_state.update({"option_prompt": options[2]}))
-        st.button(options[3], on_click = lambda: st.session_state.update({"option_prompt": options[3]}))
+        if (st.session_state["option0_asked"] == False):
+            st.button(options[0], on_click = lambda:(
+                st.session_state.update({"option_prompt": options[0]}),
+                st.session_state.update({"option0_asked": True})
+                ))
+        if (st.session_state["option1_asked"] == False):
+            st.button(options[1], on_click = lambda:(
+                st.session_state.update({"option_prompt": options[1]}),
+                st.session_state.update({"option1_asked": True})
+                ))
+        if (st.session_state["option2_asked"] == False):
+            st.button(options[2], on_click = lambda:(
+                st.session_state.update({"option_prompt": options[2]}),
+                st.session_state.update({"option2_asked": True})
+                ))
+        if (st.session_state["option3_asked"] == False):
+            st.button(options[3], on_click = lambda:(
+                st.session_state.update({"option_prompt": options[3]}),
+                st.session_state.update({"option3_asked": True})
+                ))
+        if (st.session_state["option4_asked"] == False):
+            st.button(options[4], on_click = lambda:(
+                st.session_state.update({"option_prompt": options[4]}),
+                st.session_state.update({"option4_asked": True})
+                ))
+        # st.button(options[0], on_click = lambda: st.session_state.update({"option_prompt": options[0]}))
+        # st.button(options[1], on_click = lambda: st.session_state.update({"option_prompt": options[1]}))
+        # st.button(options[2], on_click = lambda: st.session_state.update({"option_prompt": options[2]}))
+        # st.button(options[3], on_click = lambda: st.session_state.update({"option_prompt": options[3]}))
+        # st.button(options[4], on_click = lambda: st.session_state.update({"option_prompt": options[4]}))
             
     return
 
