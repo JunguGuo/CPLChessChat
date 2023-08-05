@@ -225,9 +225,10 @@ def process_prompt(prompt):
 
 
         options = [""":question: What's the oldest chess book in the collection?""",
-                   """:question: What are some intriguing chess sets in the collection? """,
-                   """:question: Are there any items related to the Netflix show "Queen's Gambit" in the collection? """,
-                   """:question: Could you show me a Ruy López's chess opening, and any materials related to him? """
+                   """:question: What are some extraordinary chess sets in the collection? """,
+                   """:question: Do you hold any treasures from the magical world of Harry Potter? """,
+                   """:question: Do you have any items connected to the Netflix sensation, 'Queen's Gambit'?""",
+                   """:question: Can you guide me through the strategic intricacies of a famous chess opening?"""
                    ]
 
         # This doesn't work...        
