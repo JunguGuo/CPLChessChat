@@ -244,7 +244,7 @@ def process_prompt(prompt):
 
 def main():
     
-    st.header("Hi, I'm a Chess Chatbot ")
+    st.header("Hi, I'm the Chess Librarian")
     #st.title("Chess Chat")
     #st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
