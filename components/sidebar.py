@@ -16,4 +16,3 @@ def sidebar():
             "chess collection in Cleveland Public Library "
         )
 
-        faq()
