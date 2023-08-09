@@ -7,12 +7,3 @@ import os
 #load_dotenv()
 
 
-def sidebar():
-    with st.sidebar:
-        
-        st.markdown("# About")
-        st.markdown(
-            "Chess GPT allows you to ask questions about the John G. White "
-            "chess collection in Cleveland Public Library "
-        )
-
