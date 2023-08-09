@@ -37,7 +37,7 @@ df = pd.read_csv('collection.csv')
 maps_df = df.dropna(subset=['longitude', 'latitude'])
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-4-32k"
+    st.session_state["openai_model"] = "gpt-4"
     
 if "option_prompt" not in st.session_state:
     st.session_state["option_prompt"] = ""
