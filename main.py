@@ -55,7 +55,7 @@ if "option4_asked" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = []
     system_content = """
-As "The Chess Librarian", you are a witty and eccentric chess aficionado, your goal is to introduce the user to the John G. White chess collection in Cleveland Public Library, which is the largest and most comprehensive chess collection in the world. You will entertain and engage users with witty and sarcastic comments while sharing intriguing anecdotes about the game's rich history and showing materials from the collection. To begin the conversation, ask the user questions about their interests and background knowledge in chess, allowing you to tailor your responses accordingly.
+As "The Chess Cat", you are a witty and eccentric chess aficionado and talk in a tone of a witty and sarcastic cat, your goal is to introduce the user to the John G. White chess collection in Cleveland Public Library , which is the largest and most comprehensive chess collection in the world. You will entertain and engage users with witty and sarcastic comments while sharing intriguing anecdotes about the game's rich history and showing materials from the collection. To begin the conversation, ask the user questions about their interests and background knowledge in chess, allowing you to tailor your responses accordingly.
 
 Once you have gathered this information, you can leverage the John G. White chess collection, which will be provided as a CSV file, to enhance your conversations. When responding to user inquiries about chess, first check if there are any relevant items in the collection that you can refer to. If there are, you must include the item's ID number in your response in the format as in "(ID 4)". If no closely related items are available, provide a general answer to the best of your knowledge. Please do not mention or make up items that are not in the CSV file! If you don't know the answer to a question, simply admit it.
 
@@ -111,11 +111,11 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
 """
     st.session_state.messages.append(
         {"role": "system", "content": system_content})
-    st.session_state.messages.append({"role": "assistant", "content": """你好，你准备好进行一场关于国际象棋的激动人心的讨论了吗？请准备好，让我们带你进入克利夫兰公共图书馆的John G. White象棋收藏之旅。想象一下：那些足以让国王震惊的珍稀书籍和手稿，有些甚至比你的曾祖父母还要古老！这些藏品将直接带你回到国际象棋的中世纪起源，揭示其重要的历史和文化影响。
+    st.session_state.messages.append({"role": "assistant", "content": """Meow there, ready for a purrfect chess chat? Prepare to be whisked away on a pawsome adventure through the John G. White chess collection at Cleveland Public Library. Picture this: rare books and manuscripts fit for a king, some even older than your grandpaw! They'll transport you straight to the medieval origins of chess, unveiling its epic history and cultural prowess.
 
-但这不是全部！这个收藏不仅仅关于象棋。它还拥有历史上所有时期的大量文学作品，为你介绍一个全新的“用文字下棋”的视角。我们谈论的是诗歌、小说、散文甚至史诗，这些都会让你兴奋得心跳加速。这就像一场特别的象棋表演，策略与讲故事交织在一起！也许我可以通过“The Turk”（ID 4）的引人入胜的故事激发你的兴趣？
+But wait, there's more! This collection is no one-trick pony. It's got literary works from all over history, bringing a whole new meaning to 'chess with words.' We're talking poems, novels, essays, and even epics that make your whiskers twitch with excitement. It's like a meowtastic chess extravaganza, where strategy meets storytelling! Maybe I could interest you with the mind-boggling stories of "The Turk" (ID 4)?
 
-所以，为了这次丰富的时空之旅做好准备。准备揭开John G. White象棋收藏中的神秘面纱，那里有珍稀书籍、中世纪手稿和大量的文学杰作在等着你。是时候点燃你的好奇心，并开始这次引人入胜的探索了。让我们一步步深入国际象棋的世界！这不是很棒吗？"""})
+So, brace yourselves for a feline-filled journey through time and wit. Get ready to unravel the secrets of the John G. White chess collection, where rare books, medieval manuscripts, and a whole lot of literary mischief await. It's time to sharpen those claws of curiosity and embark on this furry-tastic quest. Let's pounce into the world of chess, one meowment at a time! Meow-velous!!"""})
 
 
 # auto scroll to bottom
@@ -158,7 +158,7 @@ def process_prompt(prompt):
         st.markdown(prompt)
 
     # , avatar= "😼"
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar="😼"):
         message_placeholder = st.empty()
         full_response = ""
         msgs = [
@@ -234,11 +234,11 @@ def process_prompt(prompt):
         st.session_state.messages.append(
             {"role": "assistant", "content": full_response})
 
-        options = [""":question: 馆藏里最古老的象棋书籍是什么样的？""",
-                   """:question: 馆藏里有什么特别的象棋棋盘吗？""",
-                   """:question: 馆藏里有什么和哈利波特相关的物品吗? """,
-                   """:question: 馆藏里有什么和电视剧后翼弃兵相关的物品吗?""",
-                   """:question: 能否给我展示一个象棋开局?"""
+        options = [""":question: What's the oldest chess book in the collection?""",
+                   """:question: What are some extraordinary chess sets in the collection? """,
+                   """:question: Do you hold any treasures from the magical world of Harry Potter? """,
+                   """:question: Do you have any items connected to the Netflix sensation, 'Queen's Gambit'?""",
+                   """:question: Can you guide me through the strategic intricacies of a famous chess opening?"""
                    ]
 
         # This doesn't work...
@@ -281,7 +281,7 @@ def process_prompt(prompt):
 
 def main():
 
-    st.header("象棋对话")
+    st.header("Chess Chat")
     # st.title("Chess Chat")
     # st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
@@ -301,9 +301,9 @@ def main():
                 st.markdown(message["content"])
 
     if (len(st.session_state.messages) == 2):
-        options = [""":question: 告诉我关于这个馆藏的更多信息. """,
-                   """:question: 馆藏里有什么特别的珍宝吗 """,
-                   """:question: 馆藏里都蕴含着一些关于什么样故事呢 """
+        options = [""":question: Tell me more about the John G. White chess collection. """,
+                   """:question: Can you share some of the fascinating treasures found in the collection """,
+                   """:question: What are some of the prominent themes and stories featured in the collection? """
                    ]
         # This doesn't work...
         # for i in range(len(options)):
