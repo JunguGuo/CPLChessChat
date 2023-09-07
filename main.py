@@ -111,11 +111,11 @@ The chess pieces are made of bronze with a green patina, contrasting with black.
 """
     st.session_state.messages.append(
         {"role": "system", "content": system_content})
-    st.session_state.messages.append({"role": "assistant", "content": """Hello there, are you ready for an exciting discussion about chess? Get ready to be transported on an incredible journey through the John G. White chess collection at Cleveland Public Library. Picture this: rare books and manuscripts that would impress a king, some even older than your great grandparents! These pieces will take you straight to the medieval origins of chess, revealing its significant history and cultural impact.
+    st.session_state.messages.append({"role": "assistant", "content": """你好，你准备好进行一场关于国际象棋的激动人心的讨论了吗？请准备好，让我们带你进入克利夫兰公共图书馆的John G. White象棋收藏之旅。想象一下：那些足以让国王震惊的珍稀书籍和手稿，有些甚至比你的曾祖父母还要古老！这些藏品将直接带你回到国际象棋的中世纪起源，揭示其重要的历史和文化影响。
 
-But that's not all! This collection isn't just about chess. It also has a wealth of literary works from all eras of history, introducing a whole new perspective on 'chess with words.' We're talking poems, novels, essays, and even epics that will make your mind race with excitement. It's like an extraordinary chess spectacle, where strategy intersects with storytelling! Perhaps I could pique your interest with the intriguing tales of "The Turk" (ID 4)?
+但这不是全部！这个收藏不仅仅关于象棋。它还拥有历史上所有时期的大量文学作品，为你介绍一个全新的“用文字下棋”的视角。我们谈论的是诗歌、小说、散文甚至史诗，这些都会让你兴奋得心跳加速。这就像一场特别的象棋表演，策略与讲故事交织在一起！也许我可以通过“The Turk”（ID 4）的引人入胜的故事激发你的兴趣？
 
-So, get ready for an enriching journey through time and intellect. Prepare to uncover the mysteries of the John G. White chess collection, where rare books, medieval manuscripts, and a huge assortment of literary masterpieces await. It's time to ignite your curiosity and embark on this engaging exploration. Let's delve into the world of chess, one moment at a time! Isn't that marvelous?"""})
+所以，为了这次丰富的时空之旅做好准备。准备揭开John G. White象棋收藏中的神秘面纱，那里有珍稀书籍、中世纪手稿和大量的文学杰作在等着你。是时候点燃你的好奇心，并开始这次引人入胜的探索了。让我们一步步深入国际象棋的世界！这不是很棒吗？"""})
 
 
 # auto scroll to bottom
@@ -234,11 +234,11 @@ def process_prompt(prompt):
         st.session_state.messages.append(
             {"role": "assistant", "content": full_response})
 
-        options = [""":question: What's the oldest chess book in the collection?""",
-                   """:question: What are some extraordinary chess sets in the collection? """,
-                   """:question: Do you hold any treasures from the magical world of Harry Potter? """,
-                   """:question: Do you have any items connected to the Netflix sensation, 'Queen's Gambit'?""",
-                   """:question: Can you guide me through the strategic intricacies of a famous chess opening?"""
+        options = [""":question: 馆藏里最古老的象棋书籍是什么样的？""",
+                   """:question: 馆藏里有什么特别的象棋棋盘吗？""",
+                   """:question: 馆藏里有什么和哈利波特相关的物品吗? """,
+                   """:question: 馆藏里有什么和电视剧后翼弃兵相关的物品吗?""",
+                   """:question: 能否给我展示一个象棋开局?"""
                    ]
 
         # This doesn't work...
@@ -281,7 +281,7 @@ def process_prompt(prompt):
 
 def main():
 
-    st.header("Chess Chat")
+    st.header("象棋对话")
     # st.title("Chess Chat")
     # st.subheader("John G. White Chess Collection at Cleveland Public Library")
     # image = Image.open('chess.jpg')
@@ -301,9 +301,9 @@ def main():
                 st.markdown(message["content"])
 
     if (len(st.session_state.messages) == 2):
-        options = [""":question: Tell me more about the John G. White chess collection. """,
-                   """:question: Can you share some of the fascinating treasures found in the collection """,
-                   """:question: What are some of the prominent themes and stories featured in the collection? """
+        options = [""":question: 告诉我关于这个馆藏的更多信息. """,
+                   """:question: 馆藏里有什么特别的珍宝吗 """,
+                   """:question: 馆藏里都蕴含着一些关于什么样故事呢 """
                    ]
         # This doesn't work...
         # for i in range(len(options)):
